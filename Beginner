@@ -1,0 +1,7 @@
+To understand what is environment variable we have to understand what a shell varibale is.
+You can define a new shell variable using the = operator, like so:
+	-> kali@host ~ $ ANYRANDOMNAME="value"
+	-> kali@host ~ $ echo $ANYRANDOMNAME
+	water
+Shell variables are used only by the shell itself, and NOT AVAILABLE TO ANY CHILDREN PROCESSES. They are commonly used in scripts to make calculations and to store intermediate results.
+	-> kali@host ~ $ 
