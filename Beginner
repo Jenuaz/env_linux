@@ -4,4 +4,28 @@ You can define a new shell variable using the = operator, like so:
 	-> kali@host ~ $ echo $ANYRANDOMNAME
 	water
 Shell variables are used only by the shell itself, and NOT AVAILABLE TO ANY CHILDREN PROCESSES. They are commonly used in scripts to make calculations and to store intermediate results.
-	-> kali@host ~ $ 
+	-> kali@host ~ $ DRINK="water"
+	-> kali@host ~ $ AMT="plenty"
+	-> kali@host ~ $ ADVICE="Drink $AMT of $DRINK"
+	-> kali@host ~ $ echo $ADVICE
+Environment variables are shell variables that have been exported, being available to its child process. We achieve this using the export command.
+	-> kali@host ~ $ export DRINK="water"
+	-> kali@host ~ $ echo $DRINK
+	water
+For practice:
+	1. Create a new variable or overwrite an old variable.
+	2. Display a variable's value.
+	3. Modify an existing variable.
+	4. Unset a variable.
+To print env variables you can use a commands:
+	printenv
+		 also with combination to easy view : printenv | less or printenv | more
+	set
+		 also with combination to easy view: set | less or set | more
+		 allows you to change the values of shell options and set the positional parameters, or to display the names and values of shell variables. 
+		 If no options or arguments are supplied, set displays the names and values of all shell variables and functions, sorted according to the current 
+		 locale, in a format that may be reused as input for setting or resetting the currently-set variables. 
+	env
+		 will only display a list of environment variables that have been exported and it will not show all bash variables.
+
+
